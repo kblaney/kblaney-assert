@@ -67,6 +67,14 @@ public final class ArgAssertTest
   }
 
   @Test
+  public void assertNotEmpty_NonEmptyMap()
+  {
+    final Map<String, Integer> arg = Maps.newHashMap();
+    arg.put("key", 6);
+    assertEquals(arg, ArgAssert.assertNotEmpty(arg, "argName"));
+  }
+
+  @Test
   public void assertNotEmpty_NonEmptyString()
   {
     final String arg = "This string is not empty";
