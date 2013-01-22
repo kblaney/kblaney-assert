@@ -1,4 +1,4 @@
 kblaney-assert
 ==============
 
-Assertions for Java
+Kyle Blaney's Assertions
