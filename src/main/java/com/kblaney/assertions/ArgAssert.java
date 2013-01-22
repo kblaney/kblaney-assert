@@ -193,4 +193,21 @@ public final class ArgAssert
     }
     throw new IllegalArgumentException(argName + " (" + arg + ") is less than " + min);
   }
+
+  /**
+   * Asserts that a specified argument is not negative (in other words, greater than or equal to zero). If the argument
+   * is negative, this method throws an {@code IllegalArgumentException}. If the argument is zero or positive, this
+   * method returns it.
+   * 
+   * @param arg the argument to check
+   * @param argName the name to include in the {@code IllegalArgumentException} that is thrown if {@code arg} is
+   * negative
+   * 
+   * @return the argument
+   */
+  public static int assertNotNegative(final int arg, final String argName)
+  {
+    final int min = 0;
+    return assertGreaterThanOrEqual(arg, min, argName);
+  }
 }

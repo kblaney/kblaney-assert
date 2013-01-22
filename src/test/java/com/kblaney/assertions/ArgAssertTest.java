@@ -251,4 +251,30 @@ public final class ArgAssertTest
       assertEquals("argName (4) is less than 5", e.getMessage());
     }
   }
+
+  @Test
+  public void assertNotNegative_Negative()
+  {
+    try
+    {
+      ArgAssert.assertNotNegative(-7, "argName");
+      fail();
+    }
+    catch (final IllegalArgumentException e)
+    {
+      assertEquals("argName (-7) is less than 0", e.getMessage());
+    }
+  }
+
+  @Test
+  public void assertNotNegative_Zero()
+  {
+    assertEquals(0, ArgAssert.assertNotNegative(0, "argName"));
+  }
+
+  @Test
+  public void assertNotNegative_Positive()
+  {
+    assertEquals(7, ArgAssert.assertNotNegative(7, "argName"));
+  }
 }
