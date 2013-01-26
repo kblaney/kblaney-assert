@@ -6,8 +6,8 @@
    <artifactId>kblaney-assert</artifactId>
    <version>0.1-SNAPSHOT</version>
    <packaging>jar</packaging>
-   <name>Kyle Blaney Assert</name>
-   <description>Kyle Blaney's assertions</description>
+   <name>Kyle Blaney Assertions Library</name>
+   <description>Kyle Blaney's Assertions Library</description>
    <url>https://github.com/kblaney/kblaney-assert</url>
    <licenses>
       <license>
